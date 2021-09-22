@@ -25,6 +25,7 @@ pipeline {
             powershell( """
                docker-compose up -d
                ./scripts/test_container.ps1
+               docker swarm leave
             """)
          }
          post {
